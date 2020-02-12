@@ -1,0 +1,14 @@
+1) It is the method that controls the start and end of the program. From the main method, other classes methods and variables are called.  
+
+
+2) Source code 	- the code that the programmer has written
+   Bytecode 	- instructions designed for efficient execution by software
+   Executable 	- instructions that can be parsed to machine code
+
+3)  
+
+
+4)
+
+
+5)
