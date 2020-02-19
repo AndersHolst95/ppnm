@@ -1,0 +1,6 @@
+The squareroot of 2 is 1.4142135623731
+e to the power of i is 0.54+0.841i
+e to the power of i*pi is -1+1.22e-16i
+i to the power of i is 0.208+0i
+sin(i) is 0+1.18i)
+---Everything is as expected---

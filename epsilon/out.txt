@@ -1,0 +1,13 @@
+--- Ex 1 ---
+Acording to computer the max integervalue is 2147483647
+Acording to this bandit whileloop, the max intervalue us 2147483647
+Comparing this gives a difference of 0
+Comparing with minimum value, we get a difference of 0, with bot values -2147483648
+--- Ex 2 ---
+The smallest number from a double is 2.22044604925031E-16
+This is the same as                  2.22044604925031E-16
+The smallest number from a float is 1.192093E-07
+This is the same as                 1.19209289550781E-07
+--- Ez 3 ---
+float_sum_up = 15.40368
+float_sum_down = 18.80792
