@@ -1,0 +1,8 @@
+set term svg background rgb "white"
+set out "LnGamma.svg"
+set tics out
+set key right top
+set key box
+plot [][] \
+"outLnGamma.txt" with lines title"ln(gamma(x))"\
+,"lnGammaTable.txt" with points pt 7 title"Tabulated values"

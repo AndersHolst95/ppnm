@@ -19,5 +19,7 @@ double lngamma=x*Log(x+1/(12*x-1/x/10))-x+Log(2*PI/x)/2;
 return Exp(lngamma);
 }
 
-
+public static double lngamma(double x){
+	return (x-0.5)*Log(x) - x + 0.5 * Log(2*PI);
+}
 }

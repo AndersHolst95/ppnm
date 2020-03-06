@@ -123,15 +123,15 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M366.1,426.0 L366.1,390.0 L557.7,390.0 L557.7,426.0 L366.1,426.0 Z  '/></g>
+	<path stroke='black'  d='M366.1,63.1 L366.1,27.1 L557.7,27.1 L557.7,63.1 L366.1,63.1 Z  '/></g>
 	<g id="gnuplot_plot_1" ><title>gamma(x)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(498.9,402.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+	<g transform="translate(498.9,40.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >gamma(x)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(148,   0, 211)'  d='M507.2,399.0 L549.4,399.0 M46.3,224.0 L48.1,168.2 L51.7,204.9 L55.3,211.9 L58.9,214.7 L62.5,215.9
+	<path stroke='rgb(148,   0, 211)'  d='M507.2,36.1 L549.4,36.1 M46.3,224.0 L48.1,168.2 L51.7,204.9 L55.3,211.9 L58.9,214.7 L62.5,215.9
 		L66.2,216.3 L69.7,216.2 L73.4,215.7 L77.0,214.7 L80.6,213.2 L84.2,210.7 L87.8,206.9 L91.4,200.6
 		L95.0,188.6 L98.6,159.8 L102.1,18.1 M106.3,435.0 L109.5,311.0 L113.1,282.7 L116.7,271.5 L120.3,266.3
 		L123.9,264.0 L127.5,263.6 L131.1,264.8 L134.7,267.5 L138.3,272.2 L141.9,279.4 L145.6,290.9 L149.1,310.1
@@ -149,15 +149,19 @@
 	</g>
 	<g id="gnuplot_plot_2" ><title>Tabulated values</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(498.9,420.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
+	<g transform="translate(498.9,58.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Tabulated values</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<use xlink:href='#gpPt6' transform='translate(248.2,374.3) scale(4.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt6' transform='translate(186.4,130.6) scale(4.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt6' transform='translate(126.6,263.6) scale(4.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt6' transform='translate(67.4,216.3) scale(4.50)' color='rgb(  0, 158, 115)'/>
 	<use xlink:href='#gpPt6' transform='translate(335.0,184.9) scale(4.50)' color='rgb(  0, 158, 115)'/>
 	<use xlink:href='#gpPt6' transform='translate(392.8,184.9) scale(4.50)' color='rgb(  0, 158, 115)'/>
 	<use xlink:href='#gpPt6' transform='translate(450.5,143.2) scale(4.50)' color='rgb(  0, 158, 115)'/>
-	<use xlink:href='#gpPt6' transform='translate(528.3,417.0) scale(4.50)' color='rgb(  0, 158, 115)'/>
+	<use xlink:href='#gpPt6' transform='translate(528.3,54.1) scale(4.50)' color='rgb(  0, 158, 115)'/>
 </g>
 	</g>
 <g fill="none" color="#FFFFFF" stroke="rgb(  0, 158, 115)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">

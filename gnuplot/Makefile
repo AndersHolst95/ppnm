@@ -1,8 +1,14 @@
-Gamma.svg: gammaPlot.gpi outgamma.txt
+LnGamma.svg: lnGammaPlot.gpi outLnGamma.txt lnGammaTable.txt
 	gnuplot $<
 
-Error.svg: errorPlot.gpi outerror.txt
+Gamma.svg: gammaPlot.gpi outgamma.txt gammaTable.txt
 	gnuplot $<
+
+Error.svg: errorPlot.gpi outerror.txt errorTable.txt
+	gnuplot $<
+
+outLnGamma.txt: main-lngamma.exe
+	mono $< > $@
 
 outgamma.txt: main-gamma.exe
 	mono $< > $@
@@ -18,3 +24,9 @@ main-error.exe: math.dll main-error.cs
 
 main-gamma.exe: main-gamma.cs math.dll
 	mcs $< -reference:math.dll
+
+main-lngamma.exe: main-lngamma.cs math.dll
+	mcs $< -reference:math.dll
+
+clean:
+	rm --force *.svg *.exe *.dll 
