@@ -1,3 +1,5 @@
+all: LnGamma.svg Gamma.svg Error.svg
+
 LnGamma.svg: lnGammaPlot.gpi outLnGamma.txt lnGammaTable.txt
 	gnuplot $<
 
