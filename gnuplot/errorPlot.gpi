@@ -1,0 +1,8 @@
+set term svg background rgb "white"
+set out "Error.svg"
+set tics out
+set key left top
+set key box
+plot [][] \
+"outerror.txt" with lines title"erf(x)"\
+,"errorTable.txt" with points pt 7 title"Tabulated values"

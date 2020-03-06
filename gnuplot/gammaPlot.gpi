@@ -1,0 +1,9 @@
+set term svg background rgb "white"
+set out "Gamma.svg"
+set tics out
+set key right bottom
+set key box
+plot [-4:5][-5:5] \
+"outgamma.txt" with lines title"gamma(x)"\
+,"gammaTable.txt" with points pt 7 title"Tabulated values"
+
