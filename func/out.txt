@@ -1,0 +1,8 @@
+----- log(x)/sqrt(x) -----
+a = 0, b = 1
+Expected:	-4
+Actual:		-3.99976355149072
+----- Exp(-Pow(x, 2)) -----
+a = -Infinity, b = Infinity
+Expected:	1.77245385090552
+Actual:		1.77245411516459
