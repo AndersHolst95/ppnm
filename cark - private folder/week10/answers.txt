@@ -1,0 +1,11 @@
+4.1
+	Vi gemmer variable seatsRemaining før if sætningen
+
+4.2 
+	Hvis vi unlocker før vi mover os selv, så er der en sandsynlighed for at man bliver kun runable. 
+	Når vi så selv runner, kan vi komme til at fjerne os selv helt.
+	Tråden bliver helt dræbt.
+
+4.3
+	
+	
