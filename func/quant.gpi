@@ -1,0 +1,8 @@
+set terminal latex
+set term svg background rgb "white"
+set title "Expectation value"
+set tics out
+set xlabel "alpha"
+set ylabel "Energy"
+set out "quant.svg"
+plot [0:3][0:3] "outQuantum.txt" with points pt 7 notitle

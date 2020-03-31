@@ -1,0 +1,11 @@
+set term svg background rgb "white"
+set out "a.svg"
+set tics out
+set title "Exercise A"
+set xlabel "x"
+set ylabel "y(x)"
+set grid
+set key box
+set key left
+plot "outA.txt" using 1:2 pt 7 ps 0.7 lc rgb "red" title "y(x)", \
+"outA.txt" using 1:3 with lines lc rgb "blue" title "The logistic function"
