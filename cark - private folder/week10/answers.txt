@@ -7,5 +7,12 @@
 	Tråden bliver helt dræbt.
 
 4.3
-	
+
+
+
+task 3
+	Den sidder fast.
+
+task 4 
+	Den sidder fast, da den bliver initaliseret til 0, og vi prøver at butte med rdi, så vi looper i asemblykoden
 	

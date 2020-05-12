@@ -1,0 +1,8 @@
+set term svg background rgb "white"
+set out "biii.svg"
+set tics out
+set title "Exercise B) iii"
+set xlabel "x"
+set ylabel "y"
+set grid
+plot "outBiii.txt" using (1/$2)*sin($1):(1/$2)*cos($1) with lines lc rgb "red" notitle

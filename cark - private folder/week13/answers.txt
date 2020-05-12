@@ -1,0 +1,60 @@
+chapter 11
+2.0 - Suppose that both sides of a TFTP transfer implement retransmit-on-timeout and neither side imple-ments retransmit-on-duplicate. What would happen in each of the following cases if the first Data[3] packetis lost?
+
+a)	Two seconds after Data[3] was sent and lost, both sender and receiver will time out.  The sender will re-transmit  Data[3];  the  receiver  will  retransmit  ACK[2].   The  latter  will  be  ignored,  as  the  sender  is  notretransmitting on duplicates.  When the retransmitted Data[3] arrives at the receiver, the receiver will sendACK[3] and the transfer will continue.
+
+b) Sender sends Data[3] after 1 second, then the reciver 
+
+c) reciever resends ACK[2], and sender does nothing, waits 3 seconds and retransmits Data[3]
+
+Chapter 12
+2.0 
+A--(SYN->)--(<-SYN)--B
+A--(SYN ACK ->) -- (<- SYN ACK)--B
+Vi behøves ikke at gå videre, da vi kan se at begge allerede prøver at syncronisere.
+
+2.5
+NAT er routeren, der dirrigere til rigtige host. Det sker på samme måde som før, routeren sørger for at de rigtige modtager beskederne
+
+4.0
+A (FIN ->) -- (<- FIN) B
+A (ACK ->) -- (<- ACK) B
+Begge går i time wait state, ind imellem de to beskeder (meget kort tid)
+
+4.5
+Vi har sendt en FIN, hvorefter serveren modtager det og sinder "FIN+ACK" tilbage. Det sker ikke under simultan lukning, da serveren modtager vores FIN først.
+
+
+5.0
+a) Vi har sendt FIN beskeder, men internettet er crashed i mellemitde, så beskederne bliver ikke modtager, og vi kan heller ikke modtage nogle beskeder. 
+b) Vi  sender ikke flere beskder til vores connections, men de sender til os. 
+Måske hvis man downloader????
+
+6.0
+a) Send FIN -> goto FIN WAIT 1, og venter der for evigt/lang tid
+b) Kan sender beskeder, men skal sende en ack, og gå til CLOSE WAIT. Send whatever. FIN -> LAST ACK, og vente for evigt. 
+
+
+7.0
+
+A									B
+SYN, ISNA=20.000			
+									SYN,ISNB=5.000, ACK=20.001 
+ACK,SEQ=20.001		ACK=5.001		
+DATA1,SEQ=20.001	ACK=5.001
+									ACK,SEQ=5.001	ACK=21.001 (DATA1 fylder 1000)
+DATA2, SEQ=21.001	ACK=5.001
+									ACK=SEQ=5.001	ACK=22.001	(Data2fylder 1000)
+DATA3,SEQ=22.001	ACK=5.001	
+									ACK,SEQ=5.001	ACK=23.001
+									DATAB,SEQ=5.001	ACK=23.001
+ACK,SEQ=23.001		ACK=6.001
+									FIN,SEQ=6.001	ACK=23.001
+
+10.0
+a) Musen vil ikke flyttes instantat, men vente på at der er nok data, og så bevæge sig det som den blev bedt ok
+b) Den vil bevæge sig i jævne hak
+
+12.0
+Man kan aldrig være sikker på at den sidste har modtaget beskede. Det er two genreals problem
+

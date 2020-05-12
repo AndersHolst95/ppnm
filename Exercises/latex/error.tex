@@ -1,0 +1,39 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\title{The errorfunction}
+\author{Anders Holst Rasmussen}
+\begin{document}
+\maketitle
+\section{Definition}
+The error function (Gauss error function, erf) is defined as 
+\begin{equation}
+	\text{erf}(x) = \frac{2}{\sqrt{\pi}} \int^x_{0} e^{-t^2} dt,
+\end{equation}
+
+\begin{figure}
+	\centering
+	\input{plot.tex}
+	\caption{Plot of the error function with tabulated values}
+	\label{fig:erf}
+\end{figure}
+and can be seen on figure \ref{fig:erf}, along with some of the tabulated values. \\
+This function is generally used in probabillity and statistics to describe diffusion. 
+
+\section{Usage}
+In statistics, the errorfunction is used as a probabillity for a single measurement. When some measurements can be described as a normal distribution with a standard deviation $\sigma$ and expected value 0, $\text{erf}\left(\frac{a}{\sigma\sqrt{2}} \right)$ is the probabillity that a single measurement lies between -a and +a. This is very useful in determining bit error rate of a digital communication system. 
+
+\section{Properties}
+The errorfunction is an odd function, meaning that $\text{erf}(-z) = -\text{erf}(z)$.\\
+The derivative of the errorfunction is
+\begin{equation}
+	\frac{d}{dz}\text{erf}(z) = \frac{2}{\sqrt{\pi}} e^{-z^2}.
+\end{equation}
+
+
+\end{document}

@@ -1,0 +1,3 @@
+Here is the linterp function
+Here is the linterpInteg function
+This is working as intended!

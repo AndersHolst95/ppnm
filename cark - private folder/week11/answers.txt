@@ -1,0 +1,18 @@
+4.4 
+	Vi antager at notify vækker en tilfældig tråd. 
+	I while løkken vil tråden blive ved med at sove, fordi den næste tråd vil ikke blive notifyed, da vi kun notifyer current tråd. I guess. Ting er svære. Jeg er træt
+
+4.5
+	Det svare til PTHREAD_MUTEX_RECURSIVE, da de virker som en rekursiv lås
+
+4.6
+	a) Det går galt ved at begge voksne prøver at afsætte deres børn samtidig. Hvis der er 2 voksne, en med et barn, og en med to børn. Nu er der kun 3 børn, og der er ikke behov for 2 voksne. Hvis de prøver at checke deres børn ud på samme tid, kan det gå galt, da begge prøver at gå samtidig. 
+	b) løsningen er at man lader en voksen checke alle sine børn ud først, førend mand lader den næste gøre det. 
+	c) Det samme kan gøres ved hjælp af en monitor, som er en mutex for en hel class
+
+4.10
+	a) 12 sekunder, vi starter high, sover, samme for medium, og så lav, som låser mutex. Der er gået et sekund, hæj vågner, prøver at låse mutex, den er allerede låst, videre til medium, den køre i 10 sek. Nu kan lav unlocke mutex, høj kan låse mutex og terminere.
+	b) 2 sekunder, høj overgiver sin prioritet til lav, da den har locket den mutex som høj vil bruge. 
+
+Peymans spørgsmål
+	Vi har 3 tråde til rådighed, den ene tråd skal pørve at ændre pointeren, en anden tråd skal prøve at køre change priority functionen. En sidste tråd skal køre de to tråde mange gange med en stor while løkke

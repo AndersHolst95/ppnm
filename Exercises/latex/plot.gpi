@@ -1,0 +1,8 @@
+set term cairolatex input size 7cm, 5cm
+set out "plot.tex"
+set xlabel "$x$"
+set ylabel "$\\text{erf}(x)$"
+set key bottom right 
+set tics out
+plot[0:3][0:1.2] "out.txt" with lines title "$\\text{erf}(x)$" , \
+	"tab-vals.txt" with point pt 7 title "Tabulated values"
