@@ -1,0 +1,11 @@
+set term svg background rgb "white"
+set title "Linear Spline for cos(x)"
+set out "linear.svg"
+set xlabel "x"
+set ylabel "y"
+set key bottom left
+set key box
+plot "linear.txt" using 1:2 pt 7 ps 1 title "Interpolated points", \
+	"linear.txt" using 1:3 with lines title "Tabulated cos(x)", \
+	"linear.txt" using 1:4 pt 7 ps 1 title "Integrated points", \
+	"linear.txt" using 1:5 with lines title "Tabulated sin(x)"

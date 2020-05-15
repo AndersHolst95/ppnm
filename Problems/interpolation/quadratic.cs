@@ -11,11 +11,11 @@ class main{
 			y[i] = Cos(x[i]);   		// y is cos(x)
 		double z;
 		int step = 5; //number of steps between two points
-		WriteLine("x	y	cos(x)");
+		interpolate.quadratic q = new interpolate.quadratic(x, y);
 		for(int i = 0; i < x.Length - 1; i++){
 			for(int j = 0; j < step; j++){
 				z = x[i] + j*(x[i+1] - x[i]) / step;
-				WriteLine($"{z}	{interpolate.linear.spline(x, y, z)}	{Cos(z)}, {interpolate.linear.integrate(x, y, z)}	{Sin(z)}");
+				WriteLine($"{z} {q.spline(z)}	{Cos(z)}	{q.derivative(z)}	{-Sin(z)}	{q.integral(z)}	{Sin(z)}");
 			}
 		}
 	}

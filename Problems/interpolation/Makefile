@@ -3,13 +3,24 @@ SRC := $(LIBDIR)/vector.cs
 SRC += $(LIBDIR)/vector.cs
 SRC += interpolate.cs 
 
-all: out.txt
-	cat $<
+all: linear.svg quadratic.svg 
 
-out.txt: linear.exe 
+linear.svg: linear.gpi linear.txt
+	gnuplot $<
+
+quadratic.svg: quadratic.gpi quadratic.txt
+	gnuplot $<
+
+linear.txt: linear.exe 
 	mono $< > $@
 
+quadratic.txt: quadratic.exe
+		mono $< > $@
+
 linear.exe: linear.cs math.dll
+	mcs -reference:math.dll $<
+
+quadratic.exe: quadratic.cs math.dll
 	mcs -reference:math.dll $<
 
 math.dll: $(SRC) 
