@@ -2,7 +2,6 @@ using static System.Console;
 using static System.Math;
 using System;
 
-
 public class interpolate{
 	// Binary search function 
 	public static int binarySearch(vector x, int l, int r, double z){

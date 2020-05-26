@@ -1,4 +1,4 @@
-LIBDIR=../../Math
+LIBDIR=../../math
 SRC := $(LIBDIR)/vector.cs
 SRC += $(LIBDIR)/vector.cs
 SRC += interpolate.cs 
