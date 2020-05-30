@@ -1,13 +1,13 @@
 R inverse:
-  0.000246  -0.000311 
-         0   0.000113 
-Parameters:      4.94     -0.167 
-Acording to these paramaters, a = 140.290339946444 and lambda = 0.166874291347383
-This gives a half life of 4.1537086088175 days
+    0.0167    -0.0247 
+         0    0.00354 
+Parameters:      4.96     -0.171 
+Acording to these paramaters, a = 142.404080608249 and lambda = 0.171379430616684
+This gives a half life of 4.04451793348687 days
 The half life of Ra224 is actually 3.6319 days
 
 The covariance matrix:
-  1.57e-07  -3.51e-08 
- -3.51e-08   1.28e-08 
-The errors are for the parameters are:  0.000396   0.000113 
-The half life of Ra224 is then estimated to 4.1537086088175 +- -0.00281162488736301
+   0.00089  -8.75e-05 
+ -8.75e-05   1.25e-05 
+The errors are for the parameters are:    0.0298    0.00354 
+The half life of Ra224 is then estimated to 4.04451793348687 +- -0.0834378445274387
