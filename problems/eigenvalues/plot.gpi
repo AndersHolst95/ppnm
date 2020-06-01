@@ -1,0 +1,7 @@
+set term svg background rgb "white"
+set out "box.svg"
+set key box
+plot 	"data.txt" using 1:2 with lines title "psi 1",\
+	 	"" using 1:3 with lines title "psi 2" ,\
+		"" using 1:4 with lines title "psi 3" ,\
+		"" using 1:5 with lines title "psi 4" ,\

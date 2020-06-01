@@ -13,7 +13,7 @@ public class main{
 		
 		// Transform y = a*exp(-lambda * t) --> ln(y) = ln(a) - lambda*t
 		for(int i = 0; i < A.size; i++) {
-			//dA[i] = dA[i] / A[i];
+			dA[i] = dA[i] / A[i];
 			A[i] = Log(A[i]);
 		}
 
