@@ -1,0 +1,13 @@
+set term svg background rgb "white"
+set out "sirPlot_SD.svg"
+set key box
+set key top right
+set xlabel "time [days]"
+set ylabel "# of people"
+set xrange [0:150]
+
+set style line 1 lt 2 lc rgb "red" lw 2 
+set style line 2 lt 2 lc rgb "green" lw 2
+
+plot	"outSIR.txt" using 1:3 with lines ls 1 title "Infected without socail distancing" ,\
+		"outSIR_SD.txt" using 1:2 with lines ls 2 title "Infected with socal distancing" 
