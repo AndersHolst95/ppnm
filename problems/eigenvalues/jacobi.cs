@@ -139,8 +139,9 @@ public class jacobi{
 			e[i] = A[i, i];
 		diagChanged = true;
 		sweeps = 0;
-		while(diagChanged){
-			for(int p = 0; p < k; p++){
+		for(int p = 0; p < k; p++){
+			while(diagChanged){
+//			for(int p = 0; p < k; p++){
 				for(int q = p+1; q < n; q++){
 					rotate(A, V, e, p, q, 1);
 				}

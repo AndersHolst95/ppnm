@@ -71,11 +71,12 @@ public class main{
 		using(StreamWriter sw = new StreamWriter("data.txt")){
 			sw.WriteLine($"0 \t 0 \t 0 \t 0 \t 0 ");
 			for(int i = 0; i < n; i++){
-				sw.Write($"{(i + 1) * 1.0 / n}");
+				sw.Write($"{(i + 1) * 1.0 / (n + 1)}");
 				for(int j = 0; j < 4; j++)
 					sw.Write($"\t {V[i, j]} ");
 					sw.Write("\n");
 			}
+			sw.WriteLine($"1 \t 0 \t 0 \t 0 \t 0");
 		}
 
 	
