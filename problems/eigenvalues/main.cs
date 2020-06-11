@@ -93,7 +93,7 @@ public class main{
 		e.print("Has the eigenvals:");
 
 		myMatrixMethods.mirrorLower(A);
-		int kLowest = 2;
+		int kLowest = n-1;
 		vector kLowestEigenvals = jacobi.kLowestEigen(A, V, e, kLowest);
 		kLowestEigenvals.print($"The {kLowest} lowest eigenvals are:");
 		

@@ -3,6 +3,8 @@ using static System.Math;
 using System.Collections.Generic;
 using System;
 
+// A big thanks to Kristan Lytje for the help on this problem
+
 public class newton{
 	public static void Main(){
 
@@ -34,7 +36,7 @@ public class newton{
 
 		(List<double> ts, List<vector> ys, _) = ode.driver(f, a, ya, b, h, acc, eps);
 		for(int i = 0; i < ts.Count; i++){
-			WriteLine($"{ts[i]} \t {ys[i][0]} \t {ys[i][1]} \t {ys[i][2]} \t {ys[i][3]}\t {ys[i][4]} \t {ys[i][5]}");
+			WriteLine($"{ts[i]} \t {ys[i][0]} \t {ys[i][1]} \t {ys[i][2]} \t {ys[i][3]}\t {ys[i][4]} \t {ys[i][5]} \n\n");
 		}
 	}
 }

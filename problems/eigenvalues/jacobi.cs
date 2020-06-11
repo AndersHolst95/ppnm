@@ -135,11 +135,12 @@ public class jacobi{
 		vector eigenvals = new vector(k);
 		int n = A.size1;
 		V.set_identity();
+		double tol = 1e-6;
 		for(int i = 0; i < n; i++)
 			e[i] = A[i, i];
-		diagChanged = true;
 		sweeps = 0;
 		for(int p = 0; p < k; p++){
+			diagChanged = true;
 			while(diagChanged){
 //			for(int p = 0; p < k; p++){
 				for(int q = p+1; q < n; q++){

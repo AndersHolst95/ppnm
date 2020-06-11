@@ -18,11 +18,10 @@ public class ode{
 	}
 
 
-	public static (List<double>, List<vector>, vector) driver(Func<double, vector, vector> F, double a, vector y, double b, double h, double acc, double eps){
+	public static (List<double>, List<vector>, vector) driver(Func<double, vector, vector> F, double a, vector y, double b, double h, double acc = 1e-6, double eps = 1e-6){
 		List<double> xs = new List<double>();
 		List<vector> ys = new List<vector>();
 		int n = y.size;
-		// WriteLine("Are we getting somewhere?");
 		while(a < b){
 			if(b < a + h) 	// The final step
 				h = b-a;
@@ -35,7 +34,7 @@ public class ode{
 			}
 
 			double fac = Abs(tau[0] / err[0]);
-			for(int i = 0; i < n; i++){
+			for(int i = 1; i < n; i++){
 				fac = Min(fac, Abs(tau[i] / err[i]));
 			}
 			bool acceptableErr = true;

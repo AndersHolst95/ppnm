@@ -10,10 +10,10 @@ public class timing{
 		int k = 1;
 		bool tf = false; // Testing flag, used when i dont want to wait on the big calculations
 		if(tf)
-			n = 10;
+			n = 30;
 		else 
-			n = 600;
-		for(int i = 2; i <= n; i++){
+			n = 100;
+		for(int i = 3; i <= n; i++){
 			matrix A = myMatrixMethods.randMatrix(i, i);
 			myMatrixMethods.mirrorLower(A);
 			matrix V = new matrix(i, i);
@@ -39,7 +39,14 @@ public class timing{
 			double highestTime = sw.ElapsedTicks/10000.0;
 			sw.Reset();
 
-			WriteLine($"{i} \t {cyclicTime} \t {lowestTime} \t {highestTime}");
+			myMatrixMethods.mirrorLower(A);
+			sw.Start();
+			jacobi.kLowestEigen(A, V, e, i-1);
+			sw.Stop();
+			double valueByValueTime = sw.ElapsedTicks/10000.0;
+			sw.Reset();
+
+			WriteLine($"{i} \t {cyclicTime} \t {lowestTime} \t {highestTime} \t {valueByValueTime}");
 			if(i >= 100)
 				i += 30;
 		}

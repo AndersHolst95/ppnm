@@ -1,0 +1,21 @@
+----- Problem A -----
+Small tests to make sure the root finder works:
+Looking for the root of Sin(x)^2 starting at 3.000
+Found root: 	3.124
+Expected value:	3.142
+Value at root: 	0.0003077
+
+Looking for roots for the function (4 - x)*(6 - x), (y - x)*(y - 3) starting at 0.000
+Found first root:	4.000
+Value at first root:	0.0000093
+Found second root:	4.000
+Value at second root:	0.0000000
+
+The Rosenborck's vally function
+Found first root:	1.000
+Value at first root:	0.0000011
+Found second root:	1.000
+Value at second root:	-0.0000008
+
+----- Problem B -----
+with rmax = 8, the energy is -0.499975126590243

@@ -144,10 +144,10 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='black'  d='M62.2,435.0 L62.2,363.0 L170.8,363.0 L170.8,435.0 L62.2,435.0 Z  '/></g>
-	<g id="gnuplot_plot_1" ><title>u'(x)</title>
+	<g id="gnuplot_plot_1" ><title>u(x)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(112.0,375.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >u'(x)</tspan></text>
+		<text><tspan font-family="Arial" >u(x)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -213,10 +213,10 @@
 		L343.1,375.2 L355.2,398.7 L368.3,419.0 L381.4,433.6 L393.0,441.4 L404.4,444.0 L415.3,441.8 L426.4,435.0
 		L438.1,422.9 L450.6,404.8 L464.0,379.8 L478.7,347.1 L495.1,305.4 L511.4,260.3 L521.6,231.1  '/></g>
 	</g>
-	<g id="gnuplot_plot_3" ><title>u''(x)</title>
+	<g id="gnuplot_plot_3" ><title>u'(x)</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(112.0,411.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >u''(x)</tspan></text>
+		<text><tspan font-family="Arial" >u'(x)</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">

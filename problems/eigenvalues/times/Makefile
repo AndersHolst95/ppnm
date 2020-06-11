@@ -9,7 +9,7 @@ all: time.txt timeplot.svg timeHighLowPlot.svg
 timeplot.svg: timeplot.gpi time.txt
 	gnuplot $<
 
-timeHighLowPlot.svg: timeHighLowPlot.gpi
+timeHighLowPlot.svg: timeHighLowPlot.gpi time.txt
 	gnuplot $<
 	
 time.txt: time.exe

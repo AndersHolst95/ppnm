@@ -4,17 +4,19 @@ set key box
 set key bottom left
 set xlabel "x"
 set ylabel "y"
+set xrange [-2:2]
+set yrange [-2:2]
 
 set style line 1 lt 2 lc rgb "red" lw 1 
 set style line 2 lt 2 lc rgb "green" lw 1
 set style line 3 lt 2 lc rgb "blue" lw 1
 
 
-do for [i=2:100] {
-plot	"outNewton.txt" using 2:3 with circles title "r1" ,\
-		"" using 4:5 with circles title "r2" ,\
-		"" using 6:7 with circles title "r3" ,\
-		"" using 2:3 with lines ls 1 notitle ,\
-		"" using 4:5 with lines ls 2 notitle ,\
-		"" using 6:7 with lines ls 3 notitle
+do for [i=2:1000] {
+plot	"outNewton.txt" index (i-1) using 2:3 pt 7 ps 2 title "r1" ,\
+		"" index (i-1) using 4:5 pt 7 ps 2 title "r2" ,\
+		"" index (i-1) using 6:7 pt 7 ps 2 title "r3" ,\
+		"" index 0:(i-1) using 2:3 with lines ls 1 notitle ,\
+		"" index 0:(i-1) using 4:5 with lines ls 2 notitle ,\
+		"" index 0:(i-1) using 6:7 with lines ls 3 notitle
 }

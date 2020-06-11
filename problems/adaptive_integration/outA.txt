@@ -1,0 +1,45 @@
+----- Problem A -----
+Testing of basic integrals:
+Integration of sqrt(x) from 0 to 1:
+My result: 0.6670, exact: 0.6667 
+
+Integration of 4 * sqrt(1-x^2) from 0 to 1:
+My result: 3.1418, exact: 3.1416 
+
+----- Problem B -----
+Integration of 1/sqrt(x) from 0 to 1 using the variable transformation:
+My result: 2.0000, exact: 2.0000 
+
+Checking evaluations for 1/sqrt(x) from 0 to 1:
+using recursive adaptive integrator
+# of evaluations = 8572, result = 2.0000, exact = 2.0000
+Using variable transformation:
+# of evaluations = 16, result = 2.0000, exact = 2.0000
+
+Checking evaluations for ln(x)/sqrt(x) from 0 to 1:
+using recursive adaptive integrator
+# of evaluations = 8620, result = -3.9999, exact = -4.0000
+Using variable transformation:
+# of evaluations = 96, result = -3.9999, exact = -4.0000
+
+Comparing different methods to integrate 4*sqrt(1-x^2)
+using recursive adaptive integrator
+# of evaluations = 28, result = 3.14183457802727, exact = 3.14159265358979
+using variable transformation:
+# of evaluations = 44, result = 3.1415763864835, exact = 3.14159265358979
+using o8av:
+# of evaluations = 8, result = 3.14132294341936, exact = 3.14159265358979
+
+----- Problem C -----
+Solving sqrt(x)*exp(-x) from 0 to infinity:
+using variable transformation:
+# of evaluations = 48, result = 0.8863, exact = 0.8862
+using o8av:
+# of evaluations = 24, result = 0.8867, exact = 0.8862
+
+Solving exp(-x^2) from -infinity to infinity:
+using variable transformation:
+# of evaluations = 80, result = 1.7724, exact = 1.7725
+using o8av:
+# of evaluations = 48, result = 1.7727, exact = 1.7725
+
