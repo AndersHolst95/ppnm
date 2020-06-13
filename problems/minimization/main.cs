@@ -87,6 +87,8 @@ public class main{
 		WriteLine($"m:		{minimum[0]:F3}");
 		WriteLine($"Gamma:		{minimum[1]:F3}");
 		WriteLine($"A:		{minimum[2]:F3}");
+		WriteLine($"Done in {n} steps");
+
 
 	}
 }

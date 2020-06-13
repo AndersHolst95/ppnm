@@ -17,3 +17,4 @@ Found parameters:
 m:		125.972
 Gamma:		2.086
 A:		9.877
+Done in 3496 steps

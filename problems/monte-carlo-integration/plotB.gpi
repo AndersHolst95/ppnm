@@ -1,0 +1,14 @@
+set term svg background rgb "white"
+set out "plotB.svg"
+set key box
+set key top right
+set xlabel "N"
+set ylabel "err"
+a = 1.1
+f(x) = a * (1.0 / sqrt(x))
+
+
+set style line 1 lt 2 lc rgb "red" lw 2 
+
+plot	"outDataB.txt" using 1:2 pt 7 ps 0.5 title "error" ,\
+		f(x) with lines ls 1 title "1.1*(1/sqrt(N))"
