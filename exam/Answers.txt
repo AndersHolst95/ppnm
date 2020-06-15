@@ -1,15 +1,107 @@
+This document shows that the implementation of exam question number 7 is correcet.
+The document and classes are made by:
+Anders Holst Rasmussen
+Student number:
+201606907
+
+
+Implementation of the Golub-Kahan-Lanczos bidiagoalization:
+There exists a 5x5 matrix with random entries:
 A:
-        19          1         11         10          4 
-        11         19         15          2          2 
-         5         17         13          7         16 
-        10          7         12         19         17 
-        19          8          4          4         16 
-x:    -0.225      0.109      0.253      0.198     0.0993 
-c:         1          4          7          7          0 
-Ax:         1          4          7          7   5.12e-13 
-A inverse times A:
-         1  -1.87e-12  -1.95e-12  -1.58e-12  -1.99e-12 
- -1.03e-11          1  -9.13e-12  -7.34e-12  -9.59e-12 
-  1.36e-11   1.15e-11          1   9.67e-12   1.28e-11 
- -1.14e-11  -9.61e-12  -1.01e-11          1  -1.06e-11 
-  7.33e-12   6.18e-12   6.47e-12   5.18e-12          1 
+     7.000      1.000     17.000      5.000      1.000 
+     7.000     10.000      0.000     17.000      9.000 
+    19.000     10.000      0.000      7.000      3.000 
+     6.000     12.000      3.000      1.000     19.000 
+    16.000     18.000      4.000      5.000      3.000 
+And a random vector of size 5:
+c:     8.000      5.000     13.000      2.000     17.000 
+
+We can perform a bidiagonalization of A, and optaining the matrix
+B:
+    27.404     29.559      0.000      0.000      0.000 
+     0.000     17.759     10.635      0.000      0.000 
+     0.000      0.000      9.591      6.383      0.000 
+     0.000      0.000      0.000     13.452      3.540 
+     0.000      0.000      0.000      0.000     14.302 
+The method to perform the bidiagonalization of A also returns the matrices U and V. 
+U:
+     0.255      0.006     -0.316     -0.764     -0.501 
+     0.255      0.632     -0.197     -0.259      0.655 
+     0.693     -0.476      0.448     -0.135      0.271 
+     0.219      0.608      0.610      0.116     -0.443 
+     0.584      0.059     -0.537      0.564     -0.222 
+V:
+     1.000      0.000      0.000      0.000      0.000 
+     0.000      0.774     -0.360      0.519     -0.040 
+     0.000      0.248     -0.212     -0.574     -0.751 
+     0.000      0.460      0.016     -0.628      0.627 
+     0.000      0.357      0.908      0.083     -0.201 
+To check that the bidiagonalization has been performed correctly, we can check weather "U^T * U = I", and "V^T * V = I"
+U^T * U:
+     1.000      0.000      0.000      0.000      0.000 
+     0.000      1.000      0.000      0.000      0.000 
+     0.000      0.000      1.000      0.000      0.000 
+     0.000      0.000      0.000      1.000      0.000 
+     0.000      0.000      0.000      0.000      1.000 
+V^T * V:
+     1.000      0.000      0.000      0.000      0.000 
+     0.000      1.000      0.000      0.000      0.000 
+     0.000      0.000      1.000      0.000      0.000 
+     0.000      0.000      0.000      1.000      0.000 
+     0.000      0.000      0.000      0.000      1.000 
+And it is seen that this is the case.
+We can also check that "A = U*B*V^T"
+A:
+     7.000      1.000     17.000      5.000      1.000 
+     7.000     10.000      0.000     17.000      9.000 
+    19.000     10.000      0.000      7.000      3.000 
+     6.000     12.000      3.000      1.000     19.000 
+    16.000     18.000      4.000      5.000      3.000 
+U*B*V^T:
+     7.000      1.000     17.000      5.000      1.000 
+     7.000     10.000      0.000     17.000      9.000 
+    19.000     10.000      0.000      7.000      3.000 
+     6.000     12.000      3.000      1.000     19.000 
+    16.000     18.000      4.000      5.000      3.000 
+It can be seen that this is also the case.
+
+
+----- Bidiagonal solver -----
+A method to solve the equation "B * x = c" has been implemented
+This method takes a bidiagonal matrix B and a vector c, and finds the vector x
+Solving for x using B and c we get
+x:     0.934     -0.596      1.465     -0.164      1.189 
+And see that Bx = c
+B*x:     8.000      5.000     13.000      2.000     17.000 
+c:       8.000      5.000     13.000      2.000     17.000 
+
+
+----- General solver using bidiagonalization -----
+A method to solve a general equation "A*x=c" has been implemented
+This method takes a given matrix A, and a given vector c
+It then performs a bidiagonalization of A, and solves the equation "B*y = U^T*c", and obtains y
+Where y = V^T*x
+x is then found as x = V*y
+x:     0.463      0.541      0.270      0.011     -0.426 
+And see that Ax = c:
+A*x:     8.000      5.000     13.000      2.000     17.000 
+c:       8.000      5.000     13.000      2.000     17.000 
+
+
+----- Inverse of a matrix ------
+The bidiagonalization can also be used to calculate the inverse of matrix A.
+This is done by using the genrel solver
+This gives the inverse of A as:
+A^-1:
+     0.008     -0.029      0.091      0.005     -0.038 
+    -0.022      0.009     -0.076     -0.007      0.098 
+     0.054     -0.008     -0.033      0.003      0.017 
+     0.008      0.065     -0.006     -0.028     -0.015 
+     0.002      0.001      0.025      0.056     -0.052 
+And we can check that this is correct by calculating "A^-1 * A", which should be equal to I
+A^-1 * A:
+     1.000      0.000      0.000      0.000      0.000 
+     0.000      1.000      0.000      0.000      0.000 
+     0.000      0.000      1.000      0.000      0.000 
+     0.000      0.000      0.000      1.000      0.000 
+     0.000      0.000      0.000      0.000      1.000 
