@@ -1,0 +1,12 @@
+set term svg background rgb "white"
+set out "timeplot.svg"
+set key box
+set logscale y 10
+#set yrange[0:13000]
+set key bottom right
+set xlabel "Matrix size"
+set ylabel "Time [ms]"
+a = 0.00005
+f(x) = a*x*x*x
+plot	"time.txt" using 1:2 pt 7 ps 0.7 title "Data points",\
+		f(x) with lines title "0.000005*x^3"

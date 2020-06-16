@@ -1,0 +1,9 @@
+set term svg background rgb "white"
+set title "Decay"
+set out "plot.svg"
+set xlabel "Time [days]"
+set ylabel "Activity"
+set key box
+
+plot "out.txt" using 1:2 with lines title "fit" ,\
+	"realdata.txt" using 1:2:($2*0.05) with yerrorbars pt 2 title "real data"
